@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Routes, Route, Link,
 } from 'react-router-dom';
+import Book from './Components/Books';
 
 const NavBar = () => {
   return (
@@ -17,8 +18,7 @@ const Books = () => {
   return (
     <div className='HomePage'>
       <ul className='Booklist'>
-        <li className='Book'>Book 1</li>
-        <li className='Book'>Book 2</li>
+        <Book />
       </ul>
     </div>
   )
