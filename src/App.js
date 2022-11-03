@@ -3,6 +3,7 @@ import {
   Routes, Route, Link,
 } from 'react-router-dom';
 import Book from './Components/Books';
+import AddBook from './Components/Form';
 
 const NavBar = () => {
   return (
@@ -19,7 +20,9 @@ const Books = () => {
     <div className='HomePage'>
       <ul className='Booklist'>
         <Book />
+        <Book />
       </ul>
+      <AddBook />
     </div>
   )
 }
