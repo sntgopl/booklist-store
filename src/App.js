@@ -1,36 +1,10 @@
 import React from 'react';
 import {
-  Routes, Route, Link,
+  Routes, Route,
 } from 'react-router-dom';
-import Book from './Components/Books';
-import AddBook from './Components/Form';
-
-const NavBar = () => (
-  <nav className="NavBar">
-    <h2 className="NavTitle">Booklist</h2>
-    <Link to="/">Books</Link>
-    <Link to="/categories">Categories</Link>
-  </nav>
-);
-
-const Books = () => (
-  <div className="HomePage">
-    <ul className="Booklist">
-      <Book />
-      <Book />
-    </ul>
-    <AddBook />
-  </div>
-);
-
-const Categories = () => (
-  <div>
-    <ul>
-      <h3>Categories</h3>
-      <li>All</li>
-    </ul>
-  </div>
-);
+import NavBar from './Pages/NavBar';
+import Books from './Pages/Booklist';
+import Categories from './Pages/Categories';
 
 const App = () => (
   <div className="App">
