@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 98vh;
+  width: 100vw;
+  border: 3px solid black;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  border: 1px solid red;
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5rem;
+}
+
+.Booklist {
+  border: 1px inset grey;
+  list-style: none;
+  padding: 2rem;
+}
+
+.Book {
+  border: 1px solid black;
+  padding: 2rem;
+  margin: 1rem;
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
