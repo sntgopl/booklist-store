@@ -1,13 +1,13 @@
 import Types from '../widgets/widget';
 
-const addBook = (payload) => ({
+const addBook = (book) => ({
   type: Types.ADD_BOOK,
-  payload,
+  payload: book,
 });
 
-const removeBook = (payload) => ({
+const removeBook = (id) => ({
   type: Types.REMOVE_BOOK,
-  payload,
+  payload: id,
 });
 
 const bookReducer = (state = [], action) => {

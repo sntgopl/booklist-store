@@ -21,6 +21,7 @@ const AddBook = () => {
       category,
     };
     dispatch(addBook(book));
+    console.log(book);
   };
 
   return (
