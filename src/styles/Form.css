@@ -1,0 +1,32 @@
+.formTitle {
+  color: grey;
+  font-family: 'Montserrat', serif;
+  font-size: 1.4rem;
+}
+
+input {
+  background-color: transparent;
+  padding: 0.5rem;
+  margin-right: 2rem;
+  border: 2px solid #c4c4c4;
+  border-radius: 3px;
+}
+
+input::placeholder {
+  color: #c4c4c4;
+}
+
+select {
+  padding: 0.5rem;
+  margin: 2rem;
+  border: 2px solid #c4c4c4;
+  border-radius: 3px;
+}
+
+.addBtn {
+  color: white;
+  padding: 0.5rem;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+}

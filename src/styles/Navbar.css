@@ -1,0 +1,23 @@
+.NavBar {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  border: 1px solid #e8e8e8;
+}
+
+.NavTitle {
+  font-family: 'Montserrat', serif;
+  font-size: 1.8rem;
+  color: #0290ff;
+  margin-left: 5rem;
+}
+
+.Books {
+  text-decoration: none;
+}
+
+.Categories {
+  text-decoration: none;
+}
