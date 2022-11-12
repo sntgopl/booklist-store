@@ -8,7 +8,7 @@ const getBooks = createAsyncThunk(GET_BOOK, async (_, thunkAPI) => {
   const response = fetch(FETCH_URL, {
     method: 'GET',
   });
-  const data = await (await response).json();
+  const data = await response.json();
   thunkAPI(loadBook(response.JSON));
   return data;
 });

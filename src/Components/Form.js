@@ -1,7 +1,7 @@
-// import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/book';
+import postBook from './API/post';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -15,12 +15,12 @@ const AddBook = () => {
 
   const addToStore = (title, author) => {
     const book = {
-      // id: uuid,
+      item_id: uuid(),
       title,
       author,
       category,
     };
-    dispatch(addBook(book));
+    dispatch(postBook(book));
   };
 
   return (

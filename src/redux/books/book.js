@@ -8,9 +8,9 @@ const addBook = (book) => ({
   book,
 });
 
-const removeBook = (id) => ({
+const removeBook = (itemId) => ({
   type: Types.REMOVE_BOOK,
-  id,
+  itemId,
 });
 
 const loadBook = (books) => ({
@@ -21,10 +21,9 @@ const loadBook = (books) => ({
 const bookReducer = (state = iState, action) => {
   switch (action.type) {
     case Types.ADD_BOOK:
-      console.log(state);
       return [...state, action.book];
     case Types.REMOVE_BOOK:
-      const filterBooks = state.filter((book) => book.id !== action.id);
+      const filterBooks = state.filter((book) => book.item_id !== action.itemId);
       return filterBooks;
     case Types.LOAD_BOOKS:
       const booklist = [];
