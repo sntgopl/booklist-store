@@ -22,11 +22,21 @@ const bookReducer = (state = iState, action) => {
   switch (action.type) {
     case Types.ADD_BOOK:
       console.log(state);
-      return [...state, { ...action.book, id: state.length + 1 }];
+      return [...state, action.book];
     case Types.REMOVE_BOOK:
       const filterBooks = state.filter((book) => book.id !== action.id);
-      const newArray = filterBooks.map((book, index) => ({ ...book, id: index + 1 }));
-      return [...newArray];
+      return filterBooks;
+    case Types.LOAD_BOOKS:
+      const booklist = [];
+      Object.entries(action.books).forEach(([key, value]) => {
+        booklist.push({
+          item_id: key,
+          title: value[0].title,
+          author: value[0].author,
+          category: value[0].category,
+        });
+      });
+      return [...booklist];
     default:
       return state;
   }
