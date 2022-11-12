@@ -26,15 +26,16 @@ const AddBook = () => {
   return (
     <div>
       <form>
-        <h3>Add new book</h3>
-        <input type="text" onChange={getTitle} placeholder="write the name of the book you want to add" />
-        <input type="text" onChange={getAuthor} placeholder="write the name of the author of the book" />
+        <h3 className="formTitle">ADD NEW BOOK</h3>
+        <input className="inputTitle" type="text" onChange={getTitle} placeholder="write the name of the book you want to add" />
+        <input className="inputAuthor" type="text" onChange={getAuthor} placeholder="write the name of the author of the book" />
         <select name="Category" onChange={getCategory}>
           <option value="--">--Please choose an option--</option>
           <option value="terror">Terror</option>
           <option value="drama">Drama</option>
         </select>
         <button
+          className="addBtn"
           type="button"
           onClick={(e) => {
             e.preventDefault();

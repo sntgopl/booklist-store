@@ -1,0 +1,14 @@
+.Booklist {
+  border-bottom: 2px solid #c4c4c4;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.removeBtn {
+  background-color: transparent;
+  padding: 0.3rem;
+  border: none;
+  color: #4386bf;
+  display: none;
+}

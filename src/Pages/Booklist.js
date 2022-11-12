@@ -22,6 +22,7 @@ const Books = () => {
               id={book.item_id}
             />
             <button
+              className="removeBtn"
               type="button"
               onClick={() => {
                 remove(book.item_id);

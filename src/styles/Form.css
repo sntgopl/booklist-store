@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+.formTitle {
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+}
+
+input {
+  background-color: transparent;
+  padding: 0.5rem;
+  margin-right: 2rem;
+  border: 2px solid #c4c4c4;
+  border-radius: 3px;
+}
+
+.inputTitle {
+  width: 30vw;
+}
+
+.inputAuthor {
+  width: 15vw;
+}
+
+input::placeholder {
+  color: #c4c4c4;
+}
+
+select {
+  padding: 0.5rem;
+  margin: 2rem;
+  border: 2px solid #c4c4c4;
+  border-radius: 3px;
+  width: 17vw;
+}
+
+.addBtn {
+  color: white;
+  padding: 0.5rem;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px;
+}
