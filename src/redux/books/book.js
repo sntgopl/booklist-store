@@ -1,50 +1,45 @@
 /* eslint-disable no-case-declarations */
 import Types from '../widgets/widget';
 
-const iState = [
-  {
-    id: 1,
-    title: 'The Lord of the Rings',
-    author: 'Tolkien',
-    category: 'fantasy',
-  },
-  {
-    id: 2,
-    title: 'Harry Potter',
-    author: 'I don`t remember',
-    category: 'fantasy',
-  },
-  {
-    id: 3,
-    title: 'I am Legend',
-    author: 'Willsmith',
-    category: 'fantasy',
-  },
-];
+const iState = [];
 
 const addBook = (book) => ({
   type: Types.ADD_BOOK,
   book,
 });
 
-const removeBook = (id) => ({
+const removeBook = (itemId) => ({
   type: Types.REMOVE_BOOK,
-  id,
+  itemId,
+});
+
+const loadBook = (books) => ({
+  type: Types.LOAD_BOOKS,
+  books,
 });
 
 const bookReducer = (state = iState, action) => {
   switch (action.type) {
     case Types.ADD_BOOK:
-      console.log(state);
-      return [...state, { ...action.book, id: state.length + 1 }];
+      return [...state, action.book];
     case Types.REMOVE_BOOK:
-      const filterBooks = state.filter((book) => book.id !== action.id);
-      const newArray = filterBooks.map((book, index) => ({ ...book, id: index + 1 }));
-      return [...newArray];
+      const filterBooks = state.filter((book) => book.item_id !== action.itemId);
+      return filterBooks;
+    case Types.LOAD_BOOKS:
+      const booklist = [];
+      Object.entries(action.books).forEach(([key, value]) => {
+        booklist.push({
+          item_id: key,
+          title: value[0].title,
+          author: value[0].author,
+          category: value[0].category,
+        });
+      });
+      return [...booklist];
     default:
       return state;
   }
 };
 
-export { addBook, removeBook };
+export { addBook, removeBook, loadBook };
 export default bookReducer;
