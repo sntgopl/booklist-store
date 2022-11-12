@@ -21,3 +21,8 @@
 .Categories {
   text-decoration: none;
 }
+
+.user {
+  height: 5rem;
+  width: 3rem;
+}
