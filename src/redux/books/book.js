@@ -1,26 +1,7 @@
 /* eslint-disable no-case-declarations */
 import Types from '../widgets/widget';
 
-const iState = [
-  {
-    id: 1,
-    title: 'The Lord of the Rings',
-    author: 'Tolkien',
-    category: 'fantasy',
-  },
-  {
-    id: 2,
-    title: 'Harry Potter',
-    author: 'I don`t remember',
-    category: 'fantasy',
-  },
-  {
-    id: 3,
-    title: 'I am Legend',
-    author: 'Willsmith',
-    category: 'fantasy',
-  },
-];
+const iState = [];
 
 const addBook = (book) => ({
   type: Types.ADD_BOOK,
@@ -30,6 +11,11 @@ const addBook = (book) => ({
 const removeBook = (id) => ({
   type: Types.REMOVE_BOOK,
   id,
+});
+
+const loadBook = (books) => ({
+  type: Types.LOAD_BOOKS,
+  books,
 });
 
 const bookReducer = (state = iState, action) => {
@@ -46,5 +32,5 @@ const bookReducer = (state = iState, action) => {
   }
 };
 
-export { addBook, removeBook };
+export { addBook, removeBook, loadBook };
 export default bookReducer;
