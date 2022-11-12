@@ -37,10 +37,10 @@ const bookReducer = (state = iState, action) => {
     case Types.ADD_BOOK:
       console.log(state);
       return [...state, { ...action.book, id: state.length + 1 }];
-    // case Types.REMOVE_BOOK:
-    //   const filterBooks = state.filter((book) => book.id !== action.id);
-    //   const newArray = filterBooks.map((book, index) => ({ ...book, id: index + 1 }));
-    //   return [...newArray];
+    case Types.REMOVE_BOOK:
+      const filterBooks = state.filter((book) => book.id !== action.id);
+      const newArray = filterBooks.map((book, index) => ({ ...book, id: index + 1 }));
+      return [...newArray];
     default:
       return state;
   }

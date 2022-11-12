@@ -9,6 +9,7 @@ const Books = () => {
   const dispatch = useDispatch();
   const remove = (id) => {
     dispatch(removeBook(id));
+    console.log(id);
   };
   return (
     <div className="HomePage">
@@ -16,7 +17,15 @@ const Books = () => {
         {booklist.map((book) => (
           <li key={book.id}>
             <Book title={book.title} author={book.author} category={book.category} id={book.id} />
-            <button type="button" onClick={remove(book.id)}>Remove</button>
+            <button
+              type="button"
+              onClick={() => {
+                remove(book.id);
+              }}
+            >
+              Remove
+
+            </button>
           </li>
         ))}
       </ul>
